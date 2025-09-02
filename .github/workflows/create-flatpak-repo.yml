@@ -1,37 +1,33 @@
-# # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-# name: Node.js CI
+name: Create Flatpak Repo
 
-# on:
-#   push:
-#     branches: [ "main" ]
-#   pull_request:
-#     branches: [ "main" ]
+on:
+  workflow_dispatch
 
-# jobs:
-#   flatpak:
-#     name: "FlatPak"
-#     strategy:
-#       matrix:
-#           arch:
-#             - x86_64
-#             - aarch64
-#           include:
-#             - arch: x86_64
-#               runner: ubuntu-latest
-#             - arch: aarch64
-#               runner: ubuntu-24.04-arm
+jobs:
+  flatpak:
+    name: "FlatPak"
+    strategy:
+      matrix:
+          include:
+            - arch: x86_64
+              runner: ubuntu-latest
+              docker_image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48@sha256:bf7318751c3f4dd9453f9ba99bd323ca766b1b4cfcbc6022f7173933f7ff785c
+            - arch: aarch64
+              runner: ubuntu-24.04-arm
+              docker_image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48@sha256:183c9e4a810052aec37965c146bbb6e068ee9d7af34895becda404161a09c238
         
-#     runs-on: ${{ matrix.variant.runner }}
+    runs-on: ${{ matrix.runner }}
 
-#     steps:
-#       - uses: actions/checkout@v5
-#       - name: setupnode
-#         uses: actions/setup-node@v4.4.0
-#         with:
-#           node-version: 22.x
-#       - run: npm ci
-#       - run: npm run build
-#       - run: npm run create-repo
+    steps:
+      - uses: actions/checkout@v5
+      - name: setupnode
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: 22.x
+      - run: npm ci
+      - run: npm run build
+      - run: npm run create-repo
         
