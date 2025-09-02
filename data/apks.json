@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Droid-ify",
+        "repo": "https://github.com/Droid-ify/client",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/Droid-ify/client/releases/download/v0.6.6/app-release.apk",
+        "donations": null,
+        "id": "com.github.droidify",
+        "summary": "Clutterfree F-Droid client",
+        "translations": null,
+        "icon": "https://github.com/Droid-ify/client/blob/main/metadata/en-US/images/icon.png?raw=true"
+    },
+    {
+        "name": "F-Droid",
+        "repo": "https://gitlab.com/fdroid/fdroidclient/-/tree/master",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://gitlab.com/fdroid/fdroidclient/-/package_files/204739018/download",
+        "donations": "https://f-droid.org/en/donate/",
+        "id": "com.gitlab.fdroid",
+        "summary": "The app store that respects freedom and privacy",
+        "translations": null,
+        "icon": "https://gitlab.com/fdroid/fdroidclient/-/raw/master/src/full/fastlane/metadata/android/en-US/images/icon.png"
+    },
+    {
+        "name": "Bluemoon",
+        "repo": "https://gitlab.com/ngrob/bluemoon-android/-/tree/main",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://gitlab.com/ngrob/bluemoon-android/-/releases/v1.1.1/downloads/bluemoon-v1.1.1.apk",
+        "donations": null,
+        "id": "com.gitlab.ngrob.bluemoon",
+        "summary": "Open source, privacy friendly menstruation tracking app. Your period, your data!",
+        "translations": null,
+        "icon": "https://gitlab.com/ngrob/bluemoon-android/-/raw/main/fastlane/metadata/android/en-US/images/icon.png"
+    },
+    {
+        "name": "Offline Translator",
+        "repo": "https://github.com/DavidVentura/firefox-translator/tree/master",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/DavidVentura/firefox-translator/releases/download/v0.1.1/translator-0.1.1.apk",
+        "donations": null,
+        "id": "com.github.DavidVentura.offlinetranslate",
+        "summary": "Open source, privacy friendly menstruation tracking app. Your period, your data!",
+        "translations": null,
+        "icon": "https://github.com/DavidVentura/firefox-translator/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true" 
+    },
+    {
+        "name": "Acode editor",
+        "repo": "https://github.com/Acode-Foundation/Acode/tree/main",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/Acode-Foundation/Acode/releases/download/v1.11.6/app-fdroid-release.apk",
+        "donations": null,
+        "id": "com.github.AcodeFoundation.acode",
+        "summary": "A lightweight but powerful text/code editor.",
+        "translations": "https://github.com/Acode-Foundation/Acode?tab=readme-ov-file#-multi-language-support",
+        "icon": "https://github.com/Acode-Foundation/Acode/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true" 
+    }
+]

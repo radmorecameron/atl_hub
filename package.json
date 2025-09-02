@@ -1,0 +1,24 @@
+{
+  "name": "atl_hub",
+  "version": "1.0.0",
+  "description": "Android Translation Layer flatpak repo",
+  "homepage": "https://github.com/radmorecameron/atl_hub#readme",
+  "bugs": {
+    "url": "https://github.com/radmorecameron/atl_hub/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radmorecameron/atl_hub.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sharp": "^0.34.3",
+    "yaml": "^2.8.1"
+  }
+}

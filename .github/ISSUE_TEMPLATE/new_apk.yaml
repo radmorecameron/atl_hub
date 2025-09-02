@@ -1,0 +1,37 @@
+name: New APK
+description: Request a new APK to be added to LinAndHub
+title: "[NEW APK]:"
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+          1. Go to '...'
+          2. Click on '....'
+          3. Scroll down to '....'
+          4. See error
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Link to APK
+      description: Provide a link to the APK to be included
+      validations:
+        required: 
+  
+  - type: input
+    attributes:
+      label: Link to source code
+      description: Provide a link for the source code repository
+      validations:
+        required: true
+    
+  - type: input
+    attributes:
+      label: APK License
+      description: What license is the apk 
+      validations:
+        required: false
+  
