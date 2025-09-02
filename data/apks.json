@@ -33,7 +33,7 @@
         "icon": "https://gitlab.com/ngrob/bluemoon-android/-/raw/main/fastlane/metadata/android/en-US/images/icon.png"
     },
     {
-        "name": "Offline Translator",
+        "name": "Offline-Translator",
         "repo": "https://github.com/DavidVentura/firefox-translator/tree/master",
         "license": "GPL-3.0-only",
         "apk_file": "https://github.com/DavidVentura/firefox-translator/releases/download/v0.1.1/translator-0.1.1.apk",
@@ -44,7 +44,7 @@
         "icon": "https://github.com/DavidVentura/firefox-translator/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true" 
     },
     {
-        "name": "Acode editor",
+        "name": "acode-editor",
         "repo": "https://github.com/Acode-Foundation/Acode/tree/main",
         "license": "GPL-3.0-only",
         "apk_file": "https://github.com/Acode-Foundation/Acode/releases/download/v1.11.6/app-fdroid-release.apk",

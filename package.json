@@ -15,6 +15,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "node src/index",
+    "create-repo": "node src/repomaker",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
