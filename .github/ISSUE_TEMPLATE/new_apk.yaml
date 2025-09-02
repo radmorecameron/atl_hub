@@ -19,7 +19,7 @@ body:
       label: Link to APK
       description: Provide a link to the APK to be included
       validations:
-        required: 
+        required: true
   
   - type: input
     attributes:

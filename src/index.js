@@ -1,10 +1,11 @@
-import { writeFile, mkdir } from 'fs/promises'
+import { writeFile, mkdir } from 'node:fs/promises'
 import { stringify as yamlStringify } from 'yaml'
 import { getArrayBuffer, getDesktopFileContent, getFlatpakYamlObject, GetMetaInfoContent, GetShFileContent, createImage, getDataApks } from './templates.js'
 
 
 /**
- * @param {import('./templates').apkDataEntry} entry
+ * Process an entry, download and create the necessary files.
+ * @param {import('./templates').apkDataEntry} entry - the entry to create
  */
 async function processEntry(entry) {
     const updatedId = `${entry.id}_unofficial`
@@ -14,7 +15,7 @@ async function processEntry(entry) {
     const desktopFileContent = getDesktopFileContent(entry.name, lowerName, entry.summary, updatedId)
     const metaInfoFileContent = GetMetaInfoContent(entry, updatedId)
     const shFileContent = GetShFileContent(updatedId)
-    const flatpakYamlObj = getFlatpakYamlObject(lowerName, updatedId)
+    const flatpakYamlObject = getFlatpakYamlObject(lowerName, updatedId)
 
     let apkBuffer = Buffer.from(await getArrayBuffer(entry.apk_file))
     let icons = createImage(await getArrayBuffer(entry.icon))
@@ -23,25 +24,25 @@ async function processEntry(entry) {
 
     promises.push(writeFile(`./apps/${updatedId}/${updatedId}.apk`, apkBuffer))
 
-    icons.forEach(e => {
-        const iconFileName = `${updatedId}_icon_${e.size}x${e.size}.png`
+    for (const icon of icons) {
+        const iconFileName = `${updatedId}_icon_${icon.size}x${icon.size}.png`
 
         promises.push(
-            e.sharp.toFile(`./apps/${updatedId}/${iconFileName}`)
+            icon.sharp.toFile(`./apps/${updatedId}/${iconFileName}`)
         )
 
-        flatpakYamlObj.modules[0].sources.splice(2, 0, { type: 'file', path: `${iconFileName}` })
-        flatpakYamlObj.modules[0]['build-commands'].splice(2, 0,
-            `install -D ${iconFileName} /app/share/icons/hicolor/${e.size}x${e.size}/apps/${updatedId}.png`
+        flatpakYamlObject.modules[0].sources.splice(2, 0, { type: 'file', path: `${iconFileName}` })
+        flatpakYamlObject.modules[0]['build-commands'].splice(2, 0,
+            `install -D ${iconFileName} /app/share/icons/hicolor/${icon.size}x${icon.size}/apps/${updatedId}.png`
         )
-    })
+    }
 
     await Promise.all(promises)
     promises = [
         writeFile(`./apps/${updatedId}/${updatedId}.metainfo.xml`, metaInfoFileContent),
         writeFile(`./apps/${updatedId}/${updatedId}.desktop`, desktopFileContent),
         writeFile(`./apps/${updatedId}/${lowerName}.sh`, shFileContent),
-        writeFile(`./apps/${updatedId}/${updatedId}.yml`, yamlStringify(flatpakYamlObj, {}))
+        writeFile(`./apps/${updatedId}/${updatedId}.yml`, yamlStringify(flatpakYamlObject, {}))
     ]
     await Promise.all(promises)
     console.log(`Files complete for ${updatedId}`)
@@ -49,6 +50,7 @@ async function processEntry(entry) {
 
 const allPromises = [];
 for (const entry of getDataApks()) {
+    // eslint-disable-next-line unicorn/prefer-top-level-await
     allPromises.push(processEntry(entry))
 }
 

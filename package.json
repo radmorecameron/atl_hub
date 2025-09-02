@@ -17,10 +17,19 @@
   "scripts": {
     "build": "node src/index",
     "create-repo": "node src/repomaker",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./src/*.js .github/**/*.yaml ./*.{js,json} ./data/*.json"
   },
   "dependencies": {
     "sharp": "^0.34.3",
     "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-jsdoc": "^54.3.0",
+    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint-plugin-unicorn": "^60.0.0",
+    "eslint-plugin-yml": "^1.18.0",
+    "globals": "^16.3.0"
   }
 }

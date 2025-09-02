@@ -2,6 +2,7 @@ import sharp from "sharp"
 import dataApks from '../data/apks.json' with { type: 'json' }
 
 /**
+ * Get a list of apkDataEntry for processing
  * @returns {apkDataEntry[]}
  */
 export function getDataApks() {
@@ -9,29 +10,29 @@ export function getDataApks() {
 }
 
 /**
- * @typedef {Object} apkDataEntry
- * @property {String} name
- * @property {string} repo
- * @property {string} license
- * @property {string} apk_file
- * @property {string?} donations
- * @property {string} id
- * @property {string} summary
- * @property {string?} translations
- * @property {string} icon
+ * @typedef {object} apkDataEntry - An App Entry
+ * @property {string} name - the name of the app
+ * @property {string} repo - the repo of the app
+ * @property {string} license - the license of the app
+ * @property {string} apk_file - a link to the apk file
+ * @property {string?} donations - a link to donations
+ * @property {string} id - the id of the app
+ * @property {string} summary - a summary of the app
+ * @property {string?} translations - a link to translations
+ * @property {string} icon - a link to the icon of the app
  */
 
 export const iconSizes = [16, 24, 32, 48, 64, 128, 192, 256, 512]
 
 /**
- * @param {string} name 
- * @param {string} lowerName 
- * @param {string} summary 
- * @param {string} updatedId 
- * @returns 
+ * Get the content of the desktop file.
+ * @param {string} name - the display name
+ * @param {string} lowerName - the name but lowercase
+ * @param {string} summary - a summary of the app
+ * @param {string} updatedId - the id to use
  */
 export function getDesktopFileContent(name, lowerName, summary, updatedId) {
-    return formatStr(`
+    return removeExtraWhitespace(`
         [Desktop Entry]
         Type=Application
         Name=${name}
@@ -42,8 +43,12 @@ export function getDesktopFileContent(name, lowerName, summary, updatedId) {
     `)
 }
 
+/**
+ * Get the content of the sh file
+ * @param {string} updatedId - the id to user in the sh file.
+ */
 export function GetShFileContent(updatedId) {
-    return formatStr(`
+    return removeExtraWhitespace(`
         #!/bin/sh
         export ATL_UGLY_ENABLE_WEBVIEW=
         exec android-translation-layer --gapplication-app-id=${updatedId} /app/share/${updatedId}.apk $@
@@ -51,8 +56,9 @@ export function GetShFileContent(updatedId) {
 }
 
 /**
- * @param {apkDataEntry} entry 
- * @param {string} updatedId 
+ * metainfo.xml
+ * @param {apkDataEntry} entry - an app entry that will be translated into the metainfo
+ * @param {string} updatedId - the id to use for the app entry
  */
 export function GetMetaInfoContent(entry, updatedId) {
     return `<?xml version="1.0" encoding="utf-8"?>
@@ -66,8 +72,8 @@ export function GetMetaInfoContent(entry, updatedId) {
                 <category>Education</category>
             </categories>
             <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
-            ${entry.donations != null ? `<url type="donation">${entry.donations}</url>` : ""}
-            ${entry.translations != null ? `<url type="translate">${entry.translations}</url>` : ""}
+            ${entry.donations ? `<url type="donation">${entry.donations}</url>` : ""}
+            ${entry.translations ? `<url type="translate">${entry.translations}</url>` : ""}
             <description>
                 <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
                 <p>${entry.summary}</p>
@@ -90,7 +96,7 @@ export function GetMetaInfoContent(entry, updatedId) {
 
 /**
  * Get an array of different icons.
- * @param {ArrayBuffer} buffer 
+ * @param {ArrayBuffer} buffer - the array buffer to manipulate into different icon sizes
  */
 export function createImage(buffer) {
     /** @type {{ sharp: sharp.Sharp, size: number }[]} */
@@ -106,7 +112,8 @@ export function createImage(buffer) {
 }
 
 /**
- * @param {string | URL | globalThis.Request} url 
+ * fetch an array buffer
+ * @param {string | URL | globalThis.Request} url - the url to fetch
  */
 export async function getArrayBuffer(url) {
     let info = await fetch(url)
@@ -115,8 +122,9 @@ export async function getArrayBuffer(url) {
 
 
 /**
- * @param {string} lowerName 
- * @param {string} updatedId 
+ * create a JSON object that can be serialized into a flatpak yaml file
+ * @param {string} lowerName - the lowercase name of the app
+ * @param {string} updatedId - the id to use for the app
  */
 export function getFlatpakYamlObject(lowerName, updatedId) {
     return {
@@ -179,8 +187,9 @@ export function getFlatpakYamlObject(lowerName, updatedId) {
 }
 
 /**
- * @param {string} val 
+ * remove extra whitespace from formatted strings.
+ * @param {string} value - the value to remove whitespace from
  */
-function formatStr(val) {
-    return val.replaceAll('    ', '').trimStart()
+function removeExtraWhitespace(value) {
+    return value.replaceAll('    ', '').trimStart()
 }

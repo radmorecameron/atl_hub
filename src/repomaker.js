@@ -1,22 +1,22 @@
-import { spawnSync } from 'child_process'
-import { readdir, mkdir } from 'fs/promises'
-import { join } from 'path'
+import { spawnSync } from 'node:child_process'
+import { readdir, mkdir } from 'node:fs/promises'
+import path from 'node:path'
 
-const baseDir = join(import.meta.dirname, '..')
-const buildPath = join(baseDir, 'build')
-console.log(baseDir)
-mkdir(buildPath, { recursive: true })
+const baseDirectory = path.join(import.meta.dirname, '..')
+const buildPath = path.join(baseDirectory, 'build')
 
-const dir = await readdir('./apps')
+await mkdir(buildPath, { recursive: true })
+
+const appsDirectory = await readdir('./apps')
 
 
-for (let m of dir) {
-    let path = join(baseDir, 'apps', m)
+for (let appId of appsDirectory) {
+    let appPath = path.join(baseDirectory, 'apps', appId)
     spawnSync('flatpak-builder', 
         [
-            `--repo=${join(baseDir, 'FlatpakRepo', 'repo')}`,
-            join(buildPath, m),
-            join(path, `${m}.yml`)
+            `--repo=${path.join(baseDirectory, 'FlatpakRepo', 'repo')}`,
+            path.join(buildPath, appId),
+            path.join(appPath, `${appId}.yml`)
         ],
         { stdio: 'inherit'}
     )
