@@ -1,4 +1,5 @@
 import sharp from "sharp"
+import { stat } from "node:fs/promises"
 import dataApks from '../data/apks.json' with { type: 'json' }
 
 /**
@@ -22,6 +23,7 @@ export function getDataApks() {
  * @property {string} icon - a link to the icon of the app
  * @property {string[]} categories - list of categories for the app
  * @property {string[] | undefined} permissions - list of permissions for the app
+ * @property {boolean | undefined} shouldUpdate - should we update the data for the app if it already exists? (default: false)
  */
 
 export const iconSizes = [16, 24, 32, 48, 64, 128, 192, 256, 512]
@@ -194,4 +196,12 @@ export function getFlatpakYamlObject(lowerName, updatedId) {
  */
 function removeExtraWhitespace(value) {
     return value.replaceAll('    ', '').trimStart()
+}
+
+/**
+ * Check if the path exists
+ * @param {string} path - the path to check
+ */
+export async function pathExists(path) {
+    return await stat(path).then(() => true).catch(() => false)
 }

@@ -1,7 +1,6 @@
 import { writeFile, mkdir } from 'node:fs/promises'
 import { stringify as yamlStringify } from 'yaml'
-import { getArrayBuffer, getDesktopFileContent, getFlatpakYamlObject, GetMetaInfoContent, GetShFileContent, createImage, getDataApks } from './templates.js'
-
+import { getArrayBuffer, getDesktopFileContent, getFlatpakYamlObject, GetMetaInfoContent, GetShFileContent, createImage, getDataApks, pathExists } from './templates.js'
 
 /**
  * Process an entry, download and create the necessary files.
@@ -12,7 +11,14 @@ async function processEntry(entry) {
     const lowerName = `${entry.name.toLocaleLowerCase()}`
     await mkdir(`./apps/${updatedId}`, { recursive: true })
 
+    let appAlreadyExists = await pathExists(`./apps/${updatedId}/${updatedId}.apk`)
+    if (entry.shouldUpdate !== true && appAlreadyExists) {
+        console.log(`app already exists. Skipping ${updatedId}`)
+        return;
+    }
+
     const desktopFileContent = getDesktopFileContent(entry.name, lowerName, entry.summary, updatedId)
+    // todo: if app already exists, update metainfo and add a 'release' instead
     const metaInfoFileContent = GetMetaInfoContent(entry, updatedId)
     const shFileContent = GetShFileContent(updatedId)
     const flatpakYamlObject = getFlatpakYamlObject(lowerName, updatedId)

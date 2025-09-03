@@ -10,7 +10,8 @@
         "translations": null,
         "icon": "https://github.com/Droid-ify/client/blob/main/metadata/en-US/images/icon.png?raw=true",
         "categories": ["PackageManager", "Settings"],
-        "permissions": []
+        "permissions": [],
+        "shouldUpdate": false
     },
     {
         "name": "F-Droid",
