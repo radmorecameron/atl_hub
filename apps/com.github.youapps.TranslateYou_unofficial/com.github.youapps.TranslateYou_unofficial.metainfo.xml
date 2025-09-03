@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
         <component type="desktop-application">
-            <id>com.github.you-apps.TranslateYou_unofficial</id>
+            <id>com.github.youapps.TranslateYou_unofficial</id>
             <name>Translate-You (unofficial port)</name>
             <summary>Privacy focused translator app built with MD3</summary>
             <project_license>GPL-3.0-only</project_license>
@@ -16,7 +16,7 @@
                 <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
                 <p>Privacy focused translator app built with MD3</p>
             </description>
-            <launchable type="desktop-id">com.github.you-apps.TranslateYou_unofficial.desktop</launchable>
+            <launchable type="desktop-id">com.github.youapps.TranslateYou_unofficial.desktop</launchable>
             <supports>
                 <control>pointing</control>
                 <control>keyboard</control>
@@ -25,7 +25,7 @@
             <requires>
                 <display_length compare="ge">360</display_length>
             </requires>
-            <developer id="com.github.you-apps.TranslateYou_unofficial">
+            <developer id="com.github.youapps.TranslateYou_unofficial">
                 <name>Packaged by ATLHub</name>
             </developer>
         </component>
