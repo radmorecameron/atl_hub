@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <component type="desktop-application">
+            <id>com.github.dkter.aaaaa_unofficial</id>
+            <name>aaaaa (unofficial port)</name>
+            <summary>a minimalist keyboard.</summary>
+            <project_license>MPL-2.0</project_license>
+            <metadata_license>CC0-1.0</metadata_license>
+            <categories>
+                <category>Utility</category>
+				<category>System</category>
+            </categories>
+            <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
+            
+            
+            <description>
+                <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
+                <p>a minimalist keyboard.</p>
+            </description>
+            <launchable type="desktop-id">com.github.dkter.aaaaa_unofficial.desktop</launchable>
+            <supports>
+                <control>pointing</control>
+                <control>keyboard</control>
+                <control>touch</control>
+            </supports>
+            <requires>
+                <display_length compare="ge">360</display_length>
+            </requires>
+            <developer id="com.github.dkter.aaaaa_unofficial">
+                <name>Packaged by ATLHub</name>
+            </developer>
+        </component>
+        

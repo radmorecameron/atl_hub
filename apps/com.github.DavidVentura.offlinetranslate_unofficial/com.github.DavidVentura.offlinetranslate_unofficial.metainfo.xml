@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <component type="desktop-application">
+            <id>com.github.DavidVentura.offlinetranslate_unofficial</id>
+            <name>Offline-Translator (unofficial port)</name>
+            <summary>Open source, privacy friendly menstruation tracking app. Your period, your data!</summary>
+            <project_license>GPL-3.0-only</project_license>
+            <metadata_license>CC0-1.0</metadata_license>
+            <categories>
+                <category>Development</category>
+				<category>Translation</category>
+            </categories>
+            <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
+            
+            
+            <description>
+                <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
+                <p>Open source, privacy friendly menstruation tracking app. Your period, your data!</p>
+            </description>
+            <launchable type="desktop-id">com.github.DavidVentura.offlinetranslate_unofficial.desktop</launchable>
+            <supports>
+                <control>pointing</control>
+                <control>keyboard</control>
+                <control>touch</control>
+            </supports>
+            <requires>
+                <display_length compare="ge">360</display_length>
+            </requires>
+            <developer id="com.github.DavidVentura.offlinetranslate_unofficial">
+                <name>Packaged by ATLHub</name>
+            </developer>
+        </component>
+        

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Offline-Translator
+Exec=offline-translator.sh --uri %u
+Comment=Open source, privacy friendly menstruation tracking app. Your period, your data!
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=com.github.DavidVentura.offlinetranslate_unofficial

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=drip
+Exec=drip.sh --uri %u
+Comment=Open-source, non-commercial cycle tracking app that leaves your data on your phone.
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=com.gitlab.bloodyhealth.drip_unofficial

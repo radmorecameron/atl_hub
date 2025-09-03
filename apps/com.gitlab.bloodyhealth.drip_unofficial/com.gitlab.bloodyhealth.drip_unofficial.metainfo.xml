@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <component type="desktop-application">
+            <id>com.gitlab.bloodyhealth.drip_unofficial</id>
+            <name>drip (unofficial port)</name>
+            <summary>Open-source, non-commercial cycle tracking app that leaves your data on your phone.</summary>
+            <project_license>GPL-3.0-only</project_license>
+            <metadata_license>CC0-1.0</metadata_license>
+            <categories>
+                <category>Biology</category>
+				<category>Education</category>
+				<category>Science</category>
+            </categories>
+            <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
+            
+            
+            <description>
+                <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
+                <p>Open-source, non-commercial cycle tracking app that leaves your data on your phone.</p>
+            </description>
+            <launchable type="desktop-id">com.gitlab.bloodyhealth.drip_unofficial.desktop</launchable>
+            <supports>
+                <control>pointing</control>
+                <control>keyboard</control>
+                <control>touch</control>
+            </supports>
+            <requires>
+                <display_length compare="ge">360</display_length>
+            </requires>
+            <developer id="com.gitlab.bloodyhealth.drip_unofficial">
+                <name>Packaged by ATLHub</name>
+            </developer>
+        </component>
+        

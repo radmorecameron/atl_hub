@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Translate-You
+Exec=translate-you.sh --uri %u
+Comment=Privacy focused translator app built with MD3
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=com.github.you-apps.TranslateYou_unofficial

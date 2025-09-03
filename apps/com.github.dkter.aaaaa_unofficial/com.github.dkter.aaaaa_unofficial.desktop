@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=aaaaa
+Exec=aaaaa.sh --uri %u
+Comment=a minimalist keyboard.
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=com.github.dkter.aaaaa_unofficial

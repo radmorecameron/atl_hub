@@ -1,0 +1,89 @@
+app-id: com.github.DavidVentura.offlinetranslate_unofficial
+runtime: org.gnome.Platform
+runtime-version: "48"
+sdk: org.gnome.Platform
+base: io.gitlab.android_translation_layer.BaseApp
+base-version: stable
+command: offline-translator.sh
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --socket=pulseaudio
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    version: "24.08"
+    directory: lib/ffmpeg
+    add-ld-path: .
+    no-autodownload: false
+    autodelete: false
+cleanup-commands:
+  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
+modules:
+  - name: offline-translator
+    buildsystem: simple
+    build-commands:
+      - install -D com.github.DavidVentura.offlinetranslate_unofficial.apk
+        /app/share/com.github.DavidVentura.offlinetranslate_unofficial.apk
+      - install -D offline-translator.sh /app/bin/offline-translator.sh
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_512x512.png
+        /app/share/icons/hicolor/512x512/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_256x256.png
+        /app/share/icons/hicolor/256x256/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_192x192.png
+        /app/share/icons/hicolor/192x192/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_128x128.png
+        /app/share/icons/hicolor/128x128/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_64x64.png
+        /app/share/icons/hicolor/64x64/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_48x48.png
+        /app/share/icons/hicolor/48x48/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_32x32.png
+        /app/share/icons/hicolor/32x32/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_24x24.png
+        /app/share/icons/hicolor/24x24/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial_icon_16x16.png
+        /app/share/icons/hicolor/16x16/apps/com.github.DavidVentura.offlinetranslate_unofficial.png
+      - install -D com.github.DavidVentura.offlinetranslate_unofficial.desktop
+        /app/share/applications/com.github.DavidVentura.offlinetranslate_unofficial.desktop
+      - install -D
+        com.github.DavidVentura.offlinetranslate_unofficial.metainfo.xml
+        /app/share/metainfo/com.github.DavidVentura.offlinetranslate_unofficial.metainfo.xml
+    sources:
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial.apk
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial.metainfo.xml
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_512x512.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_256x256.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_192x192.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_128x128.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_64x64.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_48x48.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_32x32.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_24x24.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial_icon_16x16.png
+      - type: file
+        path: com.github.DavidVentura.offlinetranslate_unofficial.desktop
+      - type: file
+        path: offline-translator.sh

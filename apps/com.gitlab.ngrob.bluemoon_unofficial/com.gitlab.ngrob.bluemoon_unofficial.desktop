@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Bluemoon
+Exec=bluemoon.sh --uri %u
+Comment=Open source, privacy friendly menstruation tracking app. Your period, your data!
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=com.gitlab.ngrob.bluemoon_unofficial
