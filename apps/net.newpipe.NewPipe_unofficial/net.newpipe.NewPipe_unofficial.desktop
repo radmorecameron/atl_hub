@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=NewPipe
+Exec=newpipe.sh --uri %u
+Comment=Free and lightweight YouTube frontend for Android
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=net.newpipe.NewPipe_unofficial

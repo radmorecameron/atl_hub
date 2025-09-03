@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <component type="desktop-application">
+            <id>net.newpipe.NewPipe_unofficial</id>
+            <name>NewPipe (unofficial port)</name>
+            <summary>Free and lightweight YouTube frontend for Android</summary>
+            <project_license>GPL-3.0-only</project_license>
+            <metadata_license>CC0-1.0</metadata_license>
+            <categories>
+                <category>AudioVideo</category>
+				<category>Network</category>
+            </categories>
+            <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
+            <url type="donation">https://newpipe.net/donate/</url>
+            <url type="translate">https://hosted.weblate.org/engage/newpipe/</url>
+            <description>
+                <p><em>NOTE:</em> This is an unofficial and experimental Flatpak build based on Android Translation Layer.</p>
+                <p>Free and lightweight YouTube frontend for Android</p>
+            </description>
+            <launchable type="desktop-id">net.newpipe.NewPipe_unofficial.desktop</launchable>
+            <supports>
+                <control>pointing</control>
+                <control>keyboard</control>
+                <control>touch</control>
+            </supports>
+            <requires>
+                <display_length compare="ge">360</display_length>
+            </requires>
+            <developer id="net.newpipe.NewPipe_unofficial">
+                <name>Packaged by ATLHub</name>
+            </developer>
+        </component>
+        
