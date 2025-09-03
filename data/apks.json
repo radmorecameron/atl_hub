@@ -8,7 +8,9 @@
         "id": "com.github.droidify",
         "summary": "Clutterfree F-Droid client",
         "translations": null,
-        "icon": "https://github.com/Droid-ify/client/blob/main/metadata/en-US/images/icon.png?raw=true"
+        "icon": "https://github.com/Droid-ify/client/blob/main/metadata/en-US/images/icon.png?raw=true",
+        "categories": ["PackageManager", "Settings"],
+        "permissions": []
     },
     {
         "name": "F-Droid",
@@ -19,7 +21,8 @@
         "id": "com.gitlab.fdroid",
         "summary": "The app store that respects freedom and privacy",
         "translations": null,
-        "icon": "https://gitlab.com/fdroid/fdroidclient/-/raw/master/src/full/fastlane/metadata/android/en-US/images/icon.png"
+        "icon": "https://gitlab.com/fdroid/fdroidclient/-/raw/master/src/full/fastlane/metadata/android/en-US/images/icon.png",
+        "categories": ["PackageManager", "Settings"]
     },
     {
         "name": "Bluemoon",
@@ -30,7 +33,9 @@
         "id": "com.gitlab.ngrob.bluemoon",
         "summary": "Open source, privacy friendly menstruation tracking app. Your period, your data!",
         "translations": null,
-        "icon": "https://gitlab.com/ngrob/bluemoon-android/-/raw/main/fastlane/metadata/android/en-US/images/icon.png"
+        "icon": "https://gitlab.com/ngrob/bluemoon-android/-/raw/main/fastlane/metadata/android/en-US/images/icon.png",
+        "categories": ["Biology", "Education", "Science"],
+        "keywords": ["Period", "Menstruation"]
     },
     {
         "name": "Offline-Translator",
@@ -41,7 +46,8 @@
         "id": "com.github.DavidVentura.offlinetranslate",
         "summary": "Open source, privacy friendly menstruation tracking app. Your period, your data!",
         "translations": null,
-        "icon": "https://github.com/DavidVentura/firefox-translator/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true" 
+        "icon": "https://github.com/DavidVentura/firefox-translator/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Development", "Translation"]
     },
     {
         "name": "acode-editor",
@@ -52,6 +58,262 @@
         "id": "com.github.AcodeFoundation.acode",
         "summary": "A lightweight but powerful text/code editor.",
         "translations": "https://github.com/Acode-Foundation/Acode?tab=readme-ov-file#-multi-language-support",
-        "icon": "https://github.com/Acode-Foundation/Acode/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true" 
+        "icon": "https://github.com/Acode-Foundation/Acode/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Development", "IDE"]
+    },
+    {
+        "name": "MusicSearch",
+        "repo": "https://github.com/lydavid/MusicSearch",
+        "license": "Apache-2.0",
+        "apk_file": "https://github.com/lydavid/MusicSearch/releases/download/v1.62.0/app-fDroid-release.apk",
+        "donations": null,
+        "id": "com.github.lydavid.MusicSearch",
+        "summary": "Browse songs, artists, and anything related to them.",
+        "translations": null,
+        "icon": "https://github.com/lydavid/MusicSearch/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "Audio", "Network"]
+    },
+    {
+        "name": "Choona",
+        "repo": "https://github.com/rohankhayech/Choona/tree/main",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/rohankhayech/Choona/releases/download/v1.5.1/Choona-Android-Open-v1.5.1.apk",
+        "donations": null,
+        "id": "com.github.rohankhayech.Choona",
+        "summary": "Guitar tuner with support for custom tunings.",
+        "translations": null,
+        "icon": "https://github.com/rohankhayech/Choona/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Audio", "Tuner"]
+    },
+    {
+        "name": "Privacium",
+        "repo": "https://github.com/kaleedtc/Privacium",
+        "license": "MIT",
+        "apk_file": "https://github.com/kaleedtc/Privacium/releases/download/v1.5.4/app-release.apk",
+        "donations": null,
+        "id": "com.github.kaleedtc.Privacium",
+        "summary": "A simple app for discovering tools that respects your privacy.",
+        "translations": null,
+        "icon": "https://github.com/kaleedtc/Privacium/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Network"]
+    },
+    {
+        "name": "Fluffy",
+        "repo": "https://github.com/mlm-games/Fluffy",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/mlm-games/Fluffy/releases/download/3.0.2/fluffy-3.0.2-universal.apk",
+        "donations": "https://github.com/sponsors/mlm-games",
+        "id": "com.github.mlm-games.Fluffy",
+        "summary": "A TV friendly file manager and archive viewer.",
+        "translations": null,
+        "icon": "https://github.com/mlm-games/Fluffy/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "Archiving"]
+    },
+    {
+        "name": "WikiReader",
+        "repo": "https://github.com/nsh07/WikiReader",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/nsh07/WikiReader/releases/download/v2.5.3/wikireader-v2.5.3-release.apk",
+        "donations": "https://github.com/sponsors/nsh07",
+        "id": "com.github.nsh07.WikiReader",
+        "summary": "Read Wikipedia pages distraction-free.",
+        "translations": null,
+        "icon": "https://github.com/nsh07/WikiReader/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Network"]
+    },
+    {
+        "name": "Fossify-Keyboard",
+        "repo": "https://github.com/FossifyOrg/Keyboard/",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/FossifyOrg/Keyboard/releases/download/1.4.0/keyboard-8-foss-release.apk",
+        "donations": "https://github.com/sponsors/FossifyOrg",
+        "id": "com.github.FossifyOrg.Keyboard",
+        "summary": "Simple and open-source offline keyboard with emojis.",
+        "translations": null,
+        "icon": "https://github.com/FossifyOrg/Keyboard/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "Fridgey",
+        "repo": "https://github.com/NielsLee/FoodRecords",
+        "license": "Apache-2.0",
+        "apk_file": "https://github.com/NielsLee/FoodRecords/releases/download/v2.2.7/app-release.apk",
+        "donations": "https://ko-fi.com/J3J611C0CZ",
+        "id": "com.github.NielsLee.Fridgey",
+        "summary": "A Fridgey to help recording your food!",
+        "translations": null,
+        "icon": "https://github.com/NielsLee/FoodRecords/blob/main/metadata/en-US/images/icon.png?raw=true",
+        "categories": ["Education", "Economy"]
+    },
+    {
+        "name": "SimpleKeyboard",
+        "repo": "https://github.com/rkkr/simple-keyboard",
+        "license": "Apache-2.0",
+        "apk_file": "https://github.com/rkkr/simple-keyboard/releases/download/133/app-release.apk",
+        "donations": null,
+        "id": "com.github.rkkr.SimpleKeyboard",
+        "summary": "An app for those who only need a keyboard and nothing more.",
+        "translations": "https://crowdin.com/project/simple-keyboard",
+        "icon": "https://github.com/rkkr/simple-keyboard/blob/master/metadata/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "FlorisBoard",
+        "repo": "https://github.com/florisboard/florisboard",
+        "license": "Apache-2.0",
+        "apk_file": "https://github.com/florisboard/florisboard/releases/download/v0.5.0/florisboard-0.5.0-preview.apk",
+        "donations": "https://github.com/sponsors/patrickgold",
+        "id": "com.github.florisboard.FlorisBoard",
+        "summary": "An open-source keyboard which respects your privacy. Currently in beta.",
+        "translations": "https://crowdin.florisboard.org/",
+        "icon": "https://github.com/florisboard/florisboard/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "AnySoftKeyboard",
+        "repo": "https://github.com/AnySoftKeyboard/AnySoftKeyboard",
+        "license": "Apache-2.0",
+        "apk_file": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/download/1.11-r1/ime-app-7137.apk",
+        "donations": "https://github.com/sponsors/menny",
+        "id": "com.github.AnySoftKeyboard.AnySoftKeyboard",
+        "summary": "An open-source keyboard",
+        "translations": "https://crowdin.com/project/anysoftkeyboard",
+        "icon": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/main/StoreStuff/ic_launcher-web.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "HeliBoard",
+        "repo": "https://github.com/Helium314/HeliBoard",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/Helium314/HeliBoard/releases/download/v3.2/HeliBoard_3.2-nouserlib.apk",
+        "donations": "https://liberapay.com/Helium314",
+        "id": "com.github.Helium314.HeliBoard",
+        "summary": "Customizable open-source keyboard.",
+        "translations": "https://translate.codeberg.org/projects/heliboard/",
+        "icon": "https://github.com/Helium314/HeliBoard/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "aaaaa",
+        "repo": "https://github.com/dkter/aaaaa",
+        "license": "MPL-2.0",
+        "apk_file": "https://github.com/dkter/aaaaa/releases/download/4/aaaaa_v4.apk",
+        "donations": null,
+        "id": "com.github.dkter.aaaaa",
+        "summary": "a minimalist keyboard.",
+        "translations": null,
+        "icon": "https://github.com/dkter/aaaaa/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "LeanKeyboard",
+        "repo": "https://github.com/yuliskov/LeanKeyboard",
+        "license": "MPL-2.0",
+        "apk_file": "https://github.com/yuliskov/LeanKeyboard/releases/download/6.1.31/LeanKeyboard_v6.1.31_playstore_r.apk",
+        "donations": null,
+        "id": "com.github.yuliskov.LeanKeyboard",
+        "summary": "a keyboard for android tvs.",
+        "translations": null,
+        "icon": "https://github.com/yuliskov/LeanKeyboard/blob/master/img/leankeykeyboard_logo_small.png?raw=true",
+        "categories": ["Utility", "System"]
+    },
+    {
+        "name": "AdaptItMobile",
+        "repo": "https://github.com/adapt-it/adapt-it-mobile",
+        "license": "MIT",
+        "apk_file": "https://github.com/adapt-it/adapt-it-mobile/releases/download/v1.18.1/app-release.64.apk",
+        "donations": null,
+        "id": "com.github.adapt-it.adapt-it-mobile",
+        "summary": "a simple related language translation editor designed for mobile devices.",
+        "translations": null,
+        "icon": "https://github.com/adapt-it/adapt-it-mobile/blob/master/icon.png?raw=true",
+        "categories": ["Development", "Translation"]
+    },
+    {
+        "name": "Translate-You",
+        "repo": "https://github.com/you-apps/TranslateYou",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/you-apps/TranslateYou/releases/download/v14.0/app-release.apk",
+        "donations": "https://github.com/sponsors/Bnyro",
+        "id": "com.github.you-apps.TranslateYou",
+        "summary": "Privacy focused translator app built with MD3",
+        "translations": null,
+        "icon": "https://github.com/you-apps/TranslateYou/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Development", "Translation"]
+    },
+    {
+        "name": "ANeko-Reborn",
+        "repo": "https://github.com/pass-with-high-score/ANeko",
+        "license": "LGPL-2.1-only",
+        "apk_file": "https://github.com/pass-with-high-score/ANeko/releases/download/v1.3.2/app-release.apk",
+        "donations": null,
+        "id": "com.github.pass-with-high-score.ANeko",
+        "summary": "A modern remake of Neko—your classic desktop cat pet on Android.",
+        "translations": null,
+        "icon": "https://github.com/pass-with-high-score/ANeko/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Game"]
+    },
+    {
+        "name": "Bluemoon",
+        "repo": "https://gitlab.com/ngrob/bluemoon-android/-/tree/main",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://gitlab.com/ngrob/bluemoon-android/-/releases/v1.1.1/downloads/bluemoon-v1.1.1.apk",
+        "donations": null,
+        "id": "com.gitlab.ngrob.bluemoon",
+        "summary": "Open source, privacy friendly menstruation tracking app. Your period, your data!",
+        "translations": null,
+        "icon": "https://gitlab.com/ngrob/bluemoon-android/-/raw/main/fastlane/metadata/android/en-US/images/icon.png",
+        "categories": ["Biology", "Education", "Science"],
+        "keywords": ["Period", "Menstruation"]
+    },
+    {
+        "name": "drip",
+        "repo": "https://gitlab.com/bloodyhealth/drip",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://dripapp.org/release/v1.2311.14.apk",
+        "donations": null,
+        "id": "com.gitlab.bloodyhealth.drip",
+        "summary": "Open-source, non-commercial cycle tracking app that leaves your data on your phone.",
+        "translations": null,
+        "icon": "https://gitlab.com/bloodyhealth/drip/-/raw/main/metadata/en-US/images/icon.png?ref_type=heads",
+        "categories": ["Biology", "Education", "Science"],
+        "keywords": ["Period", "Menstruation"]
+    },
+    {
+        "name": "Mensinator",
+        "repo": "https://github.com/EmmaTellblom/Mensinator",
+        "license": "MIT",
+        "apk_file": "https://github.com/EmmaTellblom/Mensinator/releases/download/v2.0/app-release.apk",
+        "donations": null,
+        "id": "com.gitlab.EmmaTellblom.Mensinator",
+        "summary": "Tailored Period Tracking, Total Privacy—Your Period, Your Control.",
+        "translations": null,
+        "icon": "https://github.com/EmmaTellblom/Mensinator/blob/main/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["Biology", "Education", "Science"],
+        "keywords": ["Period", "Menstruation"]
+    },
+    {
+        "name": "Tubular",
+        "repo": "https://github.com/polymorphicshade/Tubular",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/polymorphicshade/Tubular/releases/download/v0.28.0/tubular_v0.28.0.apk",
+        "donations": null,
+        "id": "com.github.polymorphicshade.Tubular",
+        "summary": "A fork of NewPipe, a free lightweight YouTube frontend for Android.",
+        "translations": null,
+        "icon": "https://github.com/polymorphicshade/Tubular/blob/master/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["AudioVideo", "Network"]
+    },
+    {
+        "name": "Flicky",
+        "repo": "https://github.com/mlm-games/flicky/tree/kotlin",
+        "license": "GPL-3.0-only",
+        "apk_file": "https://github.com/mlm-games/flicky/releases/download/3.2.5/flicky-3.2.5-universal.apk",
+        "donations": "https://github.com/sponsors/mlm-games",
+        "id": "com.github.mlm-games.Flicky",
+        "summary": "Android TV Fdroid repositories client.",
+        "translations": null,
+        "icon": "https://github.com/mlm-games/flicky/blob/kotlin/fastlane/metadata/android/en-US/images/icon.png?raw=true",
+        "categories": ["PackageManager", "Settings"]
     }
 ]

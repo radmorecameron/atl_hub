@@ -8,6 +8,8 @@ WIP code for hosting a flatpak repo of android applications using [Android Trans
 - https://docs.flatpak.org/en/latest/hosting-a-repository.html
 - https://github.com/flatpak/flatpak-github-actions
 - https://docs.flatpak.org/en/latest/flatpak-builder.html
+- https://freedesktop.org/software/appstream/docs/chap-Metadata.html
+- https://spdx.org/licenses/
 
 # TODO
 

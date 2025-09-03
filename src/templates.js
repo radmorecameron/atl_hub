@@ -20,6 +20,8 @@ export function getDataApks() {
  * @property {string} summary - a summary of the app
  * @property {string?} translations - a link to translations
  * @property {string} icon - a link to the icon of the app
+ * @property {string[]} categories - list of categories for the app
+ * @property {string[] | undefined} permissions - list of permissions for the app
  */
 
 export const iconSizes = [16, 24, 32, 48, 64, 128, 192, 256, 512]
@@ -69,7 +71,7 @@ export function GetMetaInfoContent(entry, updatedId) {
             <project_license>${entry.license}</project_license>
             <metadata_license>CC0-1.0</metadata_license>
             <categories>
-                <category>Education</category>
+                ${entry.categories.map(category => `<category>${category}</category>`).join('\r\n\t\t\t\t')}
             </categories>
             <url type="bugtracker">https://github.com/radmorecameron/atl_hub/issues</url>
             ${entry.donations ? `<url type="donation">${entry.donations}</url>` : ""}
